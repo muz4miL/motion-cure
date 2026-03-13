@@ -18,9 +18,7 @@ export default function Page() {
   return (
     <main className={`${jakarta.variable} ${jakarta.className} min-h-screen bg-white text-zinc-900 antialiased`}>
       <Navbar />
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
-        <Hero />
-      </div>
+      <Hero />
       <MarqueeSection />
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
         <ConditionsWeTreat />

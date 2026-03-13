@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SmoothScroll from "@/components/providers/SmoothScroll";
+import PageTransition from "@/components/providers/PageTransition";
+import Sidebar from "@/components/layout/Sidebar";
 
 export const metadata: Metadata = {
   title: "The Motion Cure Physiotherapy Clinic - Peshawar",
@@ -13,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>
+          <Sidebar />
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

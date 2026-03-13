@@ -39,10 +39,10 @@ export function ConditionsWeTreat() {
   return (
     <section
       id="conditions"
-      className="relative rounded-[2.5rem] border border-zinc-800/60 bg-zinc-950 px-4 py-12 md:px-8 md:py-16 lg:px-10 overflow-hidden"
+      className="relative rounded-[2.5rem] border border-zinc-800/60 bg-zinc-950 px-4 py-12 md:px-8 md:py-16 lg:px-10"
     >
       {/* Ambient background */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[2.5rem]">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-amber-400/5 blur-3xl" />
         <div className="absolute -right-20 bottom-16 h-72 w-72 rounded-full bg-amber-300/4 blur-3xl" />
         <div className="absolute inset-0 opacity-[0.025]" style={{

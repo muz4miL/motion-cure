@@ -144,7 +144,7 @@ export default function Reviews() {
   return (
     <section 
       ref={containerRef}
-      className="relative w-full py-28 bg-zinc-950 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative w-full py-20 bg-zinc-950 px-6 md:px-10 lg:px-20 overflow-hidden"
       id="reviews"
     >
       {/* Background texture */}
@@ -165,7 +165,7 @@ export default function Reviews() {
           variants={headerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-col items-center text-center mb-20"
+          className="flex flex-col items-center text-center mb-14"
         >
           <motion.div
             variants={badgeVariants}
@@ -179,7 +179,7 @@ export default function Reviews() {
             </span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-tight max-w-3xl leading-[1.1]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white tracking-tight max-w-3xl leading-[1.1]">
             Real stories from{' '}
             <span className="relative inline-block">
               <span className="relative z-10 text-amber-300">real patients</span>
@@ -196,7 +196,7 @@ export default function Reviews() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-zinc-500 text-base max-w-md mt-6 font-light tracking-wide"
+            className="text-zinc-500 text-sm max-w-md mt-5 font-light tracking-wide"
           >
             Every journey is unique. Here&apos;s what our patients have to say about their recovery experience.
           </motion.p>
@@ -207,7 +207,7 @@ export default function Reviews() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex justify-center gap-12 md:gap-20 mb-20"
+          className="flex justify-center gap-10 md:gap-16 mb-14"
         >
           {stats.map((stat, index) => {
             const Icon = stat.icon;
@@ -222,7 +222,7 @@ export default function Reviews() {
                     <Icon className="w-4 h-4 text-amber-400" strokeWidth={1.5} />
                   </div>
                 </div>
-                <div className="text-3xl md:text-4xl font-light text-white">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-light text-white">{stat.value}</div>
                 <div className="text-[11px] font-medium text-zinc-500 tracking-wider mt-1.5 uppercase">
                   {stat.label}
                 </div>
@@ -236,7 +236,7 @@ export default function Reviews() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5"
         >
           {reviews.map((review, index) => (
             <motion.div
@@ -247,14 +247,14 @@ export default function Reviews() {
               className="group relative"
             >
               <div className={`
-                relative bg-zinc-900 p-7 rounded-[2rem] 
+                relative bg-zinc-900 p-5 rounded-[1.5rem] 
                 border border-white/[0.07]
                 transition-all duration-500 ease-out
                 ${hoveredIndex === index ? 'shadow-[0_24px_50px_rgba(0,0,0,0.4)] border-amber-400/20' : 'shadow-[0_4px_20px_rgba(0,0,0,0.2)]'}
               `}>
                 {/* Quote Icon */}
                 <Quote 
-                  className="absolute bottom-6 right-6 w-10 h-10 text-white/5 transition-all duration-500 group-hover:text-amber-400/10" 
+                  className="absolute bottom-5 right-5 w-8 h-8 text-white/5 transition-all duration-500 group-hover:text-amber-400/10" 
                   strokeWidth={0.5}
                 />
 
@@ -265,13 +265,13 @@ export default function Reviews() {
                     backgroundColor: hoveredIndex === index ? 'rgba(251,191,36,0.15)' : 'rgba(255,255,255,0.05)'
                   }}
                   transition={{ duration: 0.3 }}
-                  className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5"
+                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4"
                 >
-                  <span className="text-base font-semibold text-zinc-300">{review.imageInitials}</span>
+                  <span className="text-sm font-semibold text-zinc-300">{review.imageInitials}</span>
                 </motion.div>
 
                 {/* Rating */}
-                <div className="flex gap-1 mb-5">
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <motion.div
                       key={i}
@@ -293,7 +293,7 @@ export default function Reviews() {
                 </div>
 
                 {/* Review Text */}
-                <blockquote className="mb-7">
+                <blockquote className="mb-5">
                   <p className="text-zinc-400 text-sm leading-relaxed font-light">
                     &ldquo;{review.review}&rdquo;
                   </p>
@@ -345,7 +345,7 @@ export default function Reviews() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 1.2 }}
-          className="flex flex-wrap items-center justify-center gap-8 mt-20 pt-8 border-t border-white/[0.06]"
+          className="flex flex-wrap items-center justify-center gap-8 mt-14 pt-6 border-t border-white/[0.06]"
         >
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 text-zinc-600" strokeWidth={1.5} />
@@ -366,7 +366,7 @@ export default function Reviews() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.4 }}
-          className="text-center mt-14"
+          className="text-center mt-10"
         >
           <p className="text-sm text-zinc-600">
             Ready to start your recovery journey?{' '}

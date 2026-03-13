@@ -13,7 +13,7 @@ const ClientLogo = ({ name, logo }: { name: string; logo: string }) => (
     <img
       src={logo}
       alt={name}
-      className="h-12 w-auto object-contain opacity-60 hover:opacity-90 transition-opacity duration-300 brightness-0 invert md:h-14"
+      className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 drop-shadow-[0_2px_8px_rgba(255,255,255,0.1)] md:h-16"
       draggable={false}
     />
   </div>

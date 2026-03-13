@@ -51,7 +51,7 @@ export const Contact = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full py-32 overflow-hidden bg-white"
+      className="relative w-full py-20 overflow-hidden bg-white"
       id="contact"
     >
       {/* Subtle background */}
@@ -67,14 +67,14 @@ export const Contact = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:32px_32px]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      <div className="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-20">
         {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-20"
+          className="text-center mb-14"
         >
           <motion.span 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -85,7 +85,7 @@ export const Contact = () => {
             <Stethoscope className="w-3.5 h-3.5" />
             Begin Your Recovery Journey
           </motion.span>
-          <h2 className="text-5xl md:text-6xl font-bold text-zinc-900 tracking-tight mb-6 leading-[1.05]">
+          <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight mb-5 leading-[1.05]">
             Ready for a{" "}
             <span className="relative inline-block">
               <span className="relative z-10">pain-free life?</span>
@@ -97,13 +97,13 @@ export const Contact = () => {
               />
             </span>
           </h2>
-          <p className="text-zinc-500 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-zinc-500 text-base max-w-xl mx-auto leading-relaxed">
             Book your personalized physiotherapy session with Dr. Sadeeq Ur Rehman. 
             Expert care in a comfortable, professional environment.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
           
           {/* Left Column: Contact Details */}
           <motion.div 

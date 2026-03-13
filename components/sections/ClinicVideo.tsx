@@ -71,7 +71,7 @@ const VideoPlayer = ({
     >
       <div
         onClick={togglePlay}
-        className={`group relative w-full cursor-pointer overflow-hidden ${aspectRatio} ${roundedClass} border border-white/60 bg-zinc-900 shadow-[0_18px_44px_rgba(15,23,42,0.24)]`}
+        className={`group relative w-full cursor-pointer overflow-hidden ${aspectRatio} ${roundedClass} border border-white/10 bg-zinc-900 shadow-[0_18px_44px_rgba(0,0,0,0.4)]`}
       >
         <video
           ref={videoRef}
@@ -117,10 +117,14 @@ const VideoPlayer = ({
 
 export default function InsideTheClinic() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-24 bg-white">
+    <section className="relative overflow-hidden py-16 md:py-20 bg-zinc-950">
       <div className="absolute left-0 top-0 h-full w-full pointer-events-none">
-        <div className="absolute -left-20 top-12 h-72 w-72 rounded-full bg-amber-100/30 blur-3xl" />
-        <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-zinc-100/60 blur-3xl" />
+        <div className="absolute -left-20 top-12 h-72 w-72 rounded-full bg-amber-500/5 blur-3xl" />
+        <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-amber-400/4 blur-3xl" />
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.8) 1px, transparent 0)`,
+          backgroundSize: '32px 32px'
+        }} />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -131,19 +135,19 @@ export default function InsideTheClinic() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center md:mb-14"
         >
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-amber-400/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-400">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-400/20 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-400">
             <Sparkles className="h-3.5 w-3.5" />
             Real Treatments. Proven Results.
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
             Inside the Clinic
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-zinc-400 md:text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-zinc-400 md:text-base">
             An exclusive look at our therapy techniques and patient consultations.
           </p>
         </motion.div>
 
-        <div className="rounded-[2rem] border border-white/[0.07] bg-white/[0.03] p-5 shadow-[0_14px_44px_rgba(0,0,0,0.3)] backdrop-blur-xl md:p-7 lg:p-9">
+        <div className="rounded-[2rem] border border-white/[0.07] bg-white/[0.03] p-4 shadow-[0_14px_44px_rgba(0,0,0,0.3)] backdrop-blur-xl md:p-6 lg:p-8">
           <div className="flex flex-col items-center justify-center gap-6 lg:flex-row lg:items-start lg:gap-8">
             <div className="w-full flex-shrink-0 lg:w-auto">
             <VideoPlayer
