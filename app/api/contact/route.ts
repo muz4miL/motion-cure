@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 export async function POST(request: Request) {
   try {
@@ -102,29 +102,20 @@ export async function POST(request: Request) {
 </body>
 </html>`;
 
-    // --- Email Sending via Nodemailer ---
-    // Configure these in your .env.local:
-    //   SMTP_USER=themotioncure@gmail.com
-    //   SMTP_PASS=your-gmail-app-password  (16-char app password from Google Account > Security > App passwords)
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER || "themotioncure@gmail.com",
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    // --- Email Sending via Resend ---
+    // 1. Create a free account at https://resend.com
+    // 2. Go to API Keys → Create API Key
+    // 3. Add it to .env.local as:  RESEND_API_KEY=re_xxxxxxxxxxxx
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    await transporter.sendMail({
-      from: `"Motion Cure Website" <${process.env.SMTP_USER || "themotioncure@gmail.com"}>`,
+    await resend.emails.send({
+      from: "Motion Cure Website <onboarding@resend.dev>",
       to: "themotioncure@gmail.com",
       replyTo: email,
       subject: `📬 New Inquiry: ${name} — ${condition || "General Inquiry"}`,
       html: emailHtml,
     });
 
-    // Log submission for debugging
     console.log("=== NEW CONTACT FORM SUBMISSION ===");
     console.log({ name, email, phone, condition, message });
 
