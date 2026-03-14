@@ -95,7 +95,7 @@ export async function POST(request: Request) {
         This email was sent from the Motion Cure website contact form.
       </p>
       <p style="margin:6px 0 0;color:#d4d4d8;font-size:10px;">
-        Hayatabad Toll Plaza, Sami Tower, 4th Floor, Clinic #411, Peshawar
+        Sami Tower Block A, 4th Floor, Clinic #411, Near Hayatabad PDA Toll Plaza, Ring Road, Peshawar
       </p>
     </div>
   </div>

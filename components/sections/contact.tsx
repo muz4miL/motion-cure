@@ -137,9 +137,9 @@ export const Contact = () => {
                     <span className="px-2 py-0.5 text-[10px] font-semibold bg-amber-50 text-amber-700 border border-amber-200/50 rounded-full">Open Now</span>
                   </h4>
                   <p className="text-zinc-500 text-sm leading-relaxed">
-                    Hayatabad Toll Plaza – Sami Tower & Medical Complex,<br />
-                    Opposite Alharam Model Town, Block A,<br />
-                    4th Floor, Clinic #411, Peshawar
+                    Sami Tower Block A, 4th Floor, Clinic #411,<br />
+                    Near Hayatabad PDA Toll Plaza,<br />
+                    Opposite Al-Haram Model Town, Ring Road, Peshawar
                   </p>
                   <button className="mt-3 text-sm font-semibold text-zinc-700 hover:text-zinc-900 flex items-center gap-1 group/btn">
                     <Navigation className="w-3.5 h-3.5" />

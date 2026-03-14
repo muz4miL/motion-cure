@@ -71,7 +71,7 @@ export default function Footer() {
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10">
                   <MapPin className="h-3.5 w-3.5 text-amber-500" />
                 </span>
-                <span>Hayatabad Toll Plaza, Sami Tower,<br />4th Floor, Peshawar</span>
+                <span>Sami Tower Block A, 4th Floor,<br />Clinic #411, Near Hayatabad PDA Toll Plaza,<br />Opposite Al-Haram Model Town, Ring Road, Peshawar</span>
               </div>
             </div>
           </div>

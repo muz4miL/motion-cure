@@ -328,7 +328,7 @@ export default function AboutPage() {
               <h2 className="mb-2 text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
                 Dr. Sadeeq Ur Rehman
               </h2>
-              <p className="mb-6 text-sm font-medium text-amber-600">
+              <p className="mb-4 text-sm font-medium text-amber-600">
                 Doctor of Physical Therapy (DPT)
               </p>
 
@@ -348,6 +348,7 @@ export default function AboutPage() {
                   </span>
                 ))}
               </div>
+
               <p className="mb-6 max-w-lg text-base leading-relaxed text-zinc-500">
                 With extensive clinical experience, Dr. Sadeeq specializes in
                 evidence-based physiotherapy — helping patients regain mobility,
@@ -387,74 +388,87 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
-
-              {/* Animated orb — same as hero */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative mt-10 flex h-52 w-full items-center justify-center"
-              >
-                {/* Outer glow halo */}
-                <motion.div
-                  animate={{ scale: [1, 1.06, 1], opacity: [0.4, 0.7, 0.4] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute h-40 w-40 rounded-full bg-gradient-to-r from-amber-400/0 via-amber-300/35 to-amber-400/0 blur-2xl"
-                />
-                {/* Primary rotating ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-                  className="absolute h-36 w-36 rounded-full border-[2.5px] border-amber-400/70 shadow-[0_0_30px_rgba(251,146,60,0.5),inset_0_0_20px_rgba(251,146,60,0.15)]"
-                />
-                {/* Counter-rotating ring */}
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
-                  className="absolute h-28 w-28 rounded-full border-[1.5px] border-zinc-300/60 shadow-[0_0_20px_rgba(212,212,216,0.3)]"
-                />
-                {/* Inner accent ring */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                  className="absolute h-20 w-20 rounded-full border border-amber-300/40 shadow-[0_0_15px_rgba(251,146,60,0.25)]"
-                />
-                {/* Core sphere */}
-                <motion.div
-                  animate={{ y: [0, -6, 0], scale: [1, 1.04, 1] }}
-                  transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative h-16 w-16 rounded-full bg-[radial-gradient(circle_at_40%_30%,#fbbf24_0%,#f59e0b_25%,#d4af37_50%,#92400e_100%)] shadow-[0_0_50px_rgba(251,191,36,0.7),0_0_80px_rgba(217,119,6,0.3),inset_0_10px_20px_rgba(255,255,255,0.2)]"
-                >
-                  <div className="absolute inset-[6px] rounded-full bg-[radial-gradient(circle_at_35%_28%,rgba(255,255,255,0.45),rgba(255,255,255,0.1)_20%,transparent_60%)]" />
-                </motion.div>
-                {/* Floating particles */}
-                {[...Array(4)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    animate={{
-                      x: [0, Math.cos(i * 1.57) * 20, 0],
-                      y: [0, Math.sin(i * 1.57) * 20, 0],
-                      opacity: [0.2, 0.8, 0.2],
-                    }}
-                    transition={{ duration: 5 + i * 0.8, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
-                    className="absolute h-1 w-1 rounded-full bg-amber-300 shadow-[0_0_6px_rgba(251,146,60,0.8)]"
-                    style={{ left: "50%", top: "50%" }}
-                  />
-                ))}
-                {/* Conic sweep */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-                  className="absolute h-44 w-44 rounded-full opacity-30"
-                  style={{
-                    background: "conic-gradient(from 0deg, rgba(251,146,60,0.3) 0deg, transparent 90deg, rgba(251,146,60,0.3) 180deg)",
-                    filter: "blur(10px)",
-                  }}
-                />
-              </motion.div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Dr. Maimoona Saleem Section ── */}
+      <section className="relative bg-[#FAFAF9] py-20 md:py-24">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute right-0 top-0 h-[400px] w-[400px] rounded-full bg-amber-100/20 blur-[120px]" />
+        </div>
+        <div className="mx-auto max-w-6xl px-6 md:px-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mb-12 text-center"
+          >
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200/60 bg-amber-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-amber-800">
+              <Users className="h-3.5 w-3.5" />
+              Our Team
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
+              Female Physiotherapist
+            </h2>
+            <p className="mx-auto mt-3 max-w-md text-base text-zinc-500">
+              Dedicated female staff available for female patients — your comfort and privacy are our priority.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="mx-auto max-w-2xl rounded-[2rem] border border-zinc-100 bg-white p-8 shadow-[0_8px_40px_rgba(0,0,0,0.06)] md:p-10"
+          >
+            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+              {/* Avatar placeholder */}
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 text-2xl font-bold text-amber-700 shadow-inner">
+                MS
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold tracking-tight text-zinc-900">
+                  Dr. Maimoona Saleem
+                </h3>
+                <p className="mt-1 text-sm font-medium text-amber-600">
+                  DPT · IKWMU · CKT-CMPT
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                  Specialist in women&apos;s physiotherapy and acupuncture. Provides compassionate,
+                  personalized treatment in a private and respectful environment.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {[
+                "DPT — Doctor of Physical Therapy",
+                "IKWMU Certified",
+                "CKT-CMPT Certified",
+                "Certified Acupuncturist",
+              ].map((cert) => (
+                <span
+                  key={cert}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/60 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                  {cert}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-6 flex items-center gap-2 rounded-xl bg-emerald-50 px-4 py-3 ring-1 ring-emerald-200/60">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              </span>
+              <span className="text-xs font-semibold text-emerald-700">Available for female patients — book via WhatsApp</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 

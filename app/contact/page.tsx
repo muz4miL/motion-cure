@@ -159,8 +159,8 @@ export default function ContactPage() {
                     <MapPin className="h-4 w-4 text-amber-400" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">Sami Tower, 4th Floor</p>
-                    <p className="text-xs text-zinc-500">Hayatabad Toll Plaza, Peshawar</p>
+                    <p className="text-sm font-semibold text-white">Sami Tower Block A, 4th Floor, Clinic #411</p>
+                    <p className="text-xs text-zinc-500">Near Hayatabad PDA Toll Plaza, Ring Road, Peshawar</p>
                   </div>
                 </div>
 
