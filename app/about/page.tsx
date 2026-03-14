@@ -331,6 +331,23 @@ export default function AboutPage() {
               <p className="mb-6 text-sm font-medium text-amber-600">
                 Doctor of Physical Therapy (DPT)
               </p>
+
+              {/* Certifications */}
+              <div className="mb-6 flex flex-wrap gap-2">
+                {[
+                  "Certified Manual Physical Therapist",
+                  "Certified Sports Specialist — FIFA",
+                  "Certified Kinesiotaping Practitioner",
+                ].map((cert) => (
+                  <span
+                    key={cert}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/60 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-amber-800"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                    {cert}
+                  </span>
+                ))}
+              </div>
               <p className="mb-6 max-w-lg text-base leading-relaxed text-zinc-500">
                 With extensive clinical experience, Dr. Sadeeq specializes in
                 evidence-based physiotherapy — helping patients regain mobility,
