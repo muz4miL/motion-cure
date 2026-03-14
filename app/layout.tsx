@@ -7,10 +7,6 @@ import Sidebar from "@/components/layout/Sidebar";
 export const metadata: Metadata = {
   title: "The Motion Cure Physiotherapy Clinic - Peshawar",
   description: "Expert Care. Pain-Free Life. No Surgery Required.",
-  icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
-  },
 };
 
 export default function RootLayout({
