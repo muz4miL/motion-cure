@@ -179,7 +179,7 @@ export default function ContactPage() {
                     <Mail className="h-4 w-4 text-amber-400" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-white">muj4544@gmail.com</p>
+                    <p className="text-sm font-semibold text-white">themotioncure@gmail.com</p>
                     <p className="text-xs text-zinc-500">Email us anytime</p>
                   </div>
                 </div>

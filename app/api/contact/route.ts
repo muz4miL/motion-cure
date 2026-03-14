@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -101,36 +102,31 @@ export async function POST(request: Request) {
 </body>
 </html>`;
 
-    // --- Email Sending ---
-    // Option 1: Using nodemailer (requires npm install nodemailer)
-    // Uncomment and configure with your SMTP credentials in .env.local:
-    //   SMTP_HOST=smtp.gmail.com
-    //   SMTP_PORT=587
-    //   SMTP_USER=your-email@gmail.com
-    //   SMTP_PASS=your-app-password
-    //
-    // const nodemailer = require("nodemailer");
-    // const transporter = nodemailer.createTransport({
-    //   host: process.env.SMTP_HOST,
-    //   port: Number(process.env.SMTP_PORT),
-    //   secure: false,
-    //   auth: {
-    //     user: process.env.SMTP_USER,
-    //     pass: process.env.SMTP_PASS,
-    //   },
-    // });
-    // await transporter.sendMail({
-    //   from: `"Motion Cure Website" <${process.env.SMTP_USER}>`,
-    //   to: "muj4544@gmail.com",
-    //   replyTo: email,
-    //   subject: `New Contact: ${name} — ${condition || "General Inquiry"}`,
-    //   html: emailHtml,
-    // });
+    // --- Email Sending via Nodemailer ---
+    // Configure these in your .env.local:
+    //   SMTP_USER=themotioncure@gmail.com
+    //   SMTP_PASS=your-gmail-app-password  (16-char app password from Google Account > Security > App passwords)
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.SMTP_USER || "themotioncure@gmail.com",
+        pass: process.env.SMTP_PASS,
+      },
+    });
 
-    // For now, log the submission (replace with actual email sending above)
+    await transporter.sendMail({
+      from: `"Motion Cure Website" <${process.env.SMTP_USER || "themotioncure@gmail.com"}>`,
+      to: "themotioncure@gmail.com",
+      replyTo: email,
+      subject: `📬 New Inquiry: ${name} — ${condition || "General Inquiry"}`,
+      html: emailHtml,
+    });
+
+    // Log submission for debugging
     console.log("=== NEW CONTACT FORM SUBMISSION ===");
     console.log({ name, email, phone, condition, message });
-    console.log("Email HTML generated successfully");
 
     return NextResponse.json({ success: true });
   } catch (error) {
