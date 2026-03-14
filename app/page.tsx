@@ -7,6 +7,7 @@ import Hero from "@/components/sections/Hero";
 import MarqueeSection from "@/components/sections/MarqueeSection";
 import Contact from "@/components/sections/contact";
 import Reviews from "@/components/sections/Reviews";
+import OnlineSessions from "@/components/sections/OnlineSessions";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function Page() {
       </div>
       <ClinicVideo />
       <Reviews />
+      <OnlineSessions />
       <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-16">
         <Contact />
       </div>
