@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
 
 const treatments = [
   "Low Back Pain & Sciatica",
@@ -60,6 +60,12 @@ export default function Footer() {
                   <Phone className="h-3.5 w-3.5 text-amber-500" />
                 </span>
                 0342-9255379
+              </a>
+              <a href="mailto:themotioncure@gmail.com" className="group flex items-center gap-3 text-[13px] text-zinc-400 transition-colors hover:text-amber-400">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-amber-500/10 group-hover:ring-amber-400/30">
+                  <Mail className="h-3.5 w-3.5 text-amber-500" />
+                </span>
+                themotioncure@gmail.com
               </a>
               <div className="flex items-start gap-3 text-[13px] text-zinc-400">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10">
